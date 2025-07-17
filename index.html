@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мой Личный Сайт</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: url('https://images.unsplash.com/photo-1618221199421-b7d2a05b14fa?auto=format&fit=crop&w=1740&q=80') no-repeat center center / cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 600px;
+      width: 100%;
+      color: white;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      margin-right: 0.5rem;
+    }
+
+    /* Скрытие аудиоэлемента */
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="glass-card">
+    <h1>Привет, я инди-разработчик</h1>
+    <p>Я создаю игры на <strong>Unity</strong> и мечтаю делать крутые проекты, которые будут вдохновлять других.</p>
+    <p>Когда я не программирую, я люблю играть в <strong>Team Fortress 2</strong> — солдат зажигает!</p>
+    <div>
+      <span class="tag">Unity</span>
+      <span class="tag">Game Dev</span>
+      <span class="tag">TF2</span>
+    </div>
+  </div>
+
+  <!-- Фоновая музыка -->
+  <audio autoplay loop>
+    <source src="b06c1142b50ea56feb502f04a2faf760.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script>
+    // Попытка автозапуска (для браузеров, требующих взаимодействия)
+    window.addEventListener('click', () => {
+      const audio = document.querySelector('audio');
+      if (audio.paused) audio.play().catch(() => {});
+    }, { once: true });
+  </script>
+</body>
+</html>
